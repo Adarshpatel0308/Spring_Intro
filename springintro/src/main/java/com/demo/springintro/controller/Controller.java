@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller // Use @Controller instead of @RestController
 @RequestMapping("/hello")
@@ -21,4 +22,11 @@ class HelloController {
         // Return the view name (hello.html)
         return "hello";
     }
+
+    @GetMapping("/UC3")
+    @ResponseBody
+    public String sayHelloByRestCall() {
+        return "Hello from BridgeLabz";
+    }
+    
 }
