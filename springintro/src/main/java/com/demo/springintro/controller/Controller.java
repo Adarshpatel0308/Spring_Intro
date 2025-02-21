@@ -28,5 +28,10 @@ class HelloController {
     public String sayHelloByRestCall() {
         return "Hello from BridgeLabz";
     }
-    
+
+    @GetMapping("/UC4")
+    @ResponseBody
+    public String sayHelloUsingVSCode() {
+        return "Hello from BridgeLabz Using BrideLabz";
+    }
 }
